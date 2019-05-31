@@ -21,7 +21,7 @@
         <!-- libraries' versions -->
         <springframework.version>4.3.24.RELEASE</springframework.version>
         <hibernate.version>5.4.2.Final</hibernate.version>
-        <mysql.connector.version>8.0.15</mysql.connector.version>
+        <mysql.connector.version>8.0.16</mysql.connector.version>
         <h2.version>1.4.199</h2.version>
 
         <!-- unknown, but needed dependencies -->
@@ -79,6 +79,11 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
         </dependency>
 
     </dependencies>

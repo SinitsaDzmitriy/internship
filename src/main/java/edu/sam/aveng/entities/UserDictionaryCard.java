@@ -6,11 +6,12 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "user_dictionary_card")
 public class UserDictionaryCard {
 
     @Id
-    @GeneratedValue(generator="increment")
-    @GenericGenerator(name="increment", strategy = "increment")
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     private int id;
 
     @Column(name = "PHRASE_IN_ENGLISH")
@@ -48,7 +49,8 @@ public class UserDictionaryCard {
         this.numberOfTrainings = numberOfTrainings;
     }
 
-    public UserDictionaryCard() {}
+    public UserDictionaryCard() {
+    }
 
     public void display() {
         System.out.println(phraseInEnglish + " - " + translation);
@@ -58,7 +60,55 @@ public class UserDictionaryCard {
         System.out.println("Number of trainings: " + numberOfTrainings);
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getPhraseInEnglish() {
+        return phraseInEnglish;
+    }
+
+    public String getTranslation() {
+        return translation;
+    }
+
+    public String getDefaultUsageExample() {
+        return defaultUsageExample;
+    }
+
+    public String getUserUsageExample() {
+        return userUsageExample;
+    }
+
+    public int getNumberOfTrainings() {
+        return numberOfTrainings;
+    }
+
+    public Date getLastTrainingDate() {
+        return lastTrainingDate;
+    }
+
     public void setTranslation(String translation) {
         this.translation = translation;
+    }
+
+    public void setPhraseInEnglish(String phraseInEnglish) {
+        this.phraseInEnglish = phraseInEnglish;
+    }
+
+    public void setDefaultUsageExample(String defaultUsageExample) {
+        this.defaultUsageExample = defaultUsageExample;
+    }
+
+    public void setUserUsageExample(String userUsageExample) {
+        this.userUsageExample = userUsageExample;
+    }
+
+    public void setNumberOfTrainings(int numberOfTrainings) {
+        this.numberOfTrainings = numberOfTrainings;
+    }
+
+    public void setLastTrainingDate(Date lastTrainingDate) {
+        this.lastTrainingDate = lastTrainingDate;
     }
 }
